@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import 'assets/index.css';
+import Game from 'pages/game/Game';
 import reportWebVitals from './reportWebVitals';
+import Recoil from './recoil';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Recoil>
+      <Game />
+    </Recoil>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
