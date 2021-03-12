@@ -1,21 +1,31 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import wordIndexState from 'recoil/atoms/wordIndexState';
-import charCountState from 'recoil/selectors/charCountState';
+import hitState from 'recoil/atoms/hitState';
 import charMatchPartialState from 'recoil/selectors/charMatchPartialState';
 import charMatchState from 'recoil/selectors/charMatchState';
+// import wordsListState from 'recoil/selectors/wordsListState';
+
+// import wordsArray from 'lib/words.json';
+import wordsState from 'recoil/atoms/wordsState';
+import hitMatchState from 'recoil/selectors/hitMatchState';
+import charCountState from 'recoil/selectors/charCountState';
+
 // import getRandomInt from './getRandomInt';
-// import words from './words.json';
 
 const useGame = () => {
+  const [isGameOver, setIsGameOver] = useState(false);
   // const [isPlaying, setIsPlaying] = useState(true);
   // const [wordIndex, setWordIndex] = useState(0);
 
-  const hitCounter = useRecoilValue(charCountState);
   const matchPartial = useRecoilValue(charMatchPartialState);
   const match = useRecoilValue(charMatchState);
+  const words = useRecoilValue(wordsState);
+  const charCount = useRecoilValue(charCountState);
+  const matchCounter = useRecoilValue(hitMatchState);
 
   const [wordIndex, setWordIndex] = useRecoilState(wordIndexState);
+  const [hitCounter, setHitCounter] = useRecoilState(hitState);
 
   // const degrees = (rad) => ((rad * 180) / Math.PI);
 
@@ -27,11 +37,40 @@ const useGame = () => {
 
   // console.log(Math.hypot(5, 12));
 
-  useEffect(() => {
-    if (match) setWordIndex(wordIndex + 1);
+  // const [words, setWords] = useRecoilState(wordsState);
 
-    console.log('Game Status:', wordIndex, hitCounter, matchPartial, match);
-  }, [hitCounter, matchPartial, match]);
+  useEffect(() => {
+    console.log(words);
+  }, []);
+
+  useEffect(() => {
+    if (match) {
+      if (words.length === wordIndex + 1) {
+        console.log('game over', words.length, wordIndex + 1);
+        setIsGameOver(true);
+      } else {
+        setWordIndex(wordIndex + 1);
+      }
+    }
+  }, [match]);
+
+  useEffect(() => {
+    if (charCount) {
+      if (matchCounter) {
+        setHitCounter(hitCounter + 1);
+      } else {
+        setHitCounter(0);
+      }
+    }
+  }, [charCount]);
+
+  useEffect(() => {
+    console.log('Game Status:', wordIndex, hitCounter, matchPartial, matchCounter);
+  }, [hitCounter, matchPartial]);
+
+  return {
+    isGameOver,
+  };
 };
 
 export default useGame;

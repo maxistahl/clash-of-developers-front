@@ -1,20 +1,24 @@
 import { useRecoilValue } from 'recoil';
-import charCountState from 'recoil/selectors/charCountState';
-import charMatchPartialState from 'recoil/selectors/charMatchPartialState';
+import hitCounterState from 'recoil/selectors/hitState';
 import charMatchState from 'recoil/selectors/charMatchState';
+import wordsState from 'recoil/atoms/wordsState';
 
 function CharacterCount() {
-  const count = useRecoilValue(charCountState);
-  const matchPartial = useRecoilValue(charMatchPartialState);
+  const hitCounter = useRecoilValue(hitCounterState);
+  const words = useRecoilValue(wordsState);
   const match = useRecoilValue(charMatchState);
 
   return (
     <>
-      Character Count:
-      {' '}
-      {count}
-      {matchPartial ? ' match' : ' no match'}
-      {match ? ' igual' : ' no igual'}
+      {words.map((item) => <div key={item.word}>{item.word}</div>)}
+      {hitCounter > 12 && (
+      <div>
+        {hitCounter}
+        {' '}
+        hits!
+      </div>
+      )}
+      {match ? ' boom!' : ''}
     </>
   );
 }
