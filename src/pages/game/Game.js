@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      {game.isGameOver && <div>Game over!</div>}
+      {game.gameStatus === 'gameover' && <div>Game over!</div>}
       <CharacterCounter />
     </div>
   );

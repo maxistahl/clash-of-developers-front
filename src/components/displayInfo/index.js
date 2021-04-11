@@ -2,8 +2,9 @@ import { useRecoilValue } from 'recoil';
 import hitCounterState from 'recoil/selectors/hitState';
 import charMatchState from 'recoil/selectors/charMatchState';
 import wordsState from 'recoil/atoms/wordsState';
+import { HITTHRESHOLD } from 'lib/constants';
 
-function CharacterCount() {
+function DisplayInfo() {
   const hitCounter = useRecoilValue(hitCounterState);
   const words = useRecoilValue(wordsState);
   const match = useRecoilValue(charMatchState);
@@ -11,7 +12,7 @@ function CharacterCount() {
   return (
     <>
       {words.map((item) => <div key={item.word}>{item.word}</div>)}
-      {hitCounter > 12 && (
+      {hitCounter > HITTHRESHOLD && (
       <div>
         {hitCounter}
         {' '}
@@ -23,4 +24,4 @@ function CharacterCount() {
   );
 }
 
-export default CharacterCount;
+export default DisplayInfo;

@@ -1,11 +1,13 @@
 import InputText from 'components/InputText';
-import CharacterCount from 'components/characterCount';
+import DisplayInfo from 'components/displayInfo';
+import ProgressBar from 'components/ProgressBar';
 
 function CharacterCounter() {
   return (
     <div>
       <InputText />
-      <CharacterCount />
+      <DisplayInfo />
+      <ProgressBar />
     </div>
   );
 }

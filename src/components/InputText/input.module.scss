@@ -1,0 +1,33 @@
+.input {
+  background: url(../../assets/images/input.svg) no-repeat scroll center center transparent;
+  width: 324px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  padding: 6px 16px 0;
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 64px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 200;
+
+  input {
+    width: 100%;
+    height: 24px;
+    border: none;
+    margin: 0;
+    background-color: transparent;
+    color: #FFF;
+    text-shadow: 0 5px 2px rgba(0, 0, 0, 0.65);
+    font-family: 'Bangers', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<svg width="823" height="83" viewBox="0 0 823 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M733.416 0.72265L733.268 0.5H733H678H677.845L677.717 0.587979L661.845 11.5H414H413.5V12V25V25.5H414H749H749.934L749.416 24.7227L733.416 0.72265Z" fill="#2B2B2B"/>
+<path d="M733.416 0.72265L733.268 0.5H733H678H677.845L677.717 0.587979L661.845 11.5H414H413.5V12V25V25.5H414H749H749.934L749.416 24.7227L733.416 0.72265Z" fill="white" fill-opacity="0.1"/>
+<path d="M733.416 0.72265L733.268 0.5H733H678H677.845L677.717 0.587979L661.845 11.5H414H413.5V12V25V25.5H414H749H749.934L749.416 24.7227L733.416 0.72265Z" fill="url(#paint0_linear)" fill-opacity="0.6"/>
+<path d="M733.416 0.72265L733.268 0.5H733H678H677.845L677.717 0.587979L661.845 11.5H414H413.5V12V25V25.5H414H749H749.934L749.416 24.7227L733.416 0.72265Z" stroke="black"/>
+<path d="M94.584 0.72265L94.7324 0.5H95H150H150.155L150.283 0.587979L166.155 11.5H414H414.5V12V25V25.5H414H79H78.0657L78.584 24.7227L94.584 0.72265Z" fill="#2B2B2B" stroke="black"/>
+<circle cx="689" cy="13" r="5" fill="black"/>
+<circle cx="705" cy="13" r="5" fill="black"/>
+<circle cx="721" cy="13" r="5" fill="black"/>
+<circle cx="109" cy="13" r="5" fill="black"/>
+<circle cx="125" cy="13" r="5" fill="black"/>
+<circle cx="141" cy="13" r="5" fill="black"/>
+<path d="M17.7227 34L0 83H823L805.277 34H17.7227Z" fill="black" fill-opacity="0.65"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 83L9.72275 26H813.277L823 83L805.277 34H17.7227L0 83Z" fill="black" fill-opacity="0.3"/>
+<defs>
+<linearGradient id="paint0_linear" x1="406" y1="25" x2="749" y2="24.9999" gradientUnits="userSpaceOnUse">
+<stop stop-color="white" stop-opacity="0"/>
+<stop offset="0.28125" stop-color="white" stop-opacity="0.435937"/>
+<stop offset="0.333333" stop-color="white" stop-opacity="0.86"/>
+<stop offset="0.677083" stop-color="white" stop-opacity="0.86"/>
+<stop offset="0.765625" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
