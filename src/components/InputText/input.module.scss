@@ -28,6 +28,59 @@
 
     &:focus {
       outline: none;
+
+      & ~ .focus::before {
+        opacity: 1;
+        transform: translate(0, -3px);
+      }
+
+      & ~ .focus::after {
+        opacity: 1;
+        transform: translate(0, -3px);
+      }
+    }
+  }
+
+  .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    &::before {
+      content: "";
+      height: 32px;
+      width: 8px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-10px, -3px);
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+      border-radius: 8px 0 0 8px;
+      border-width: 6px;
+      border-color: #F5FA12 transparent #BFF91B #555;
+      border-style: solid;
+      opacity: 0;
+    }
+
+    &::after {
+      content: "";
+      height: 32px;
+      width: 8px;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(10px, -3px);
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+      border-radius: 0 8px 8px 0;
+      border-width: 6px;
+      border-color: #F5FA12 #555 #BFF91B transparent;
+      border-style: solid;
+      opacity: 0;
     }
   }
 }

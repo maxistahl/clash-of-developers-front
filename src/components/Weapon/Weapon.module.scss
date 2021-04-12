@@ -1,0 +1,74 @@
+.weapon-container {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 300;
+  width: 82px;
+  height: 167px;
+  transform-origin: 0 164px;
+  transition: transform 0.5s cubic-bezier(1, -0.45, 0.58, 1) 0.2s;
+
+  .weapon {
+    background: url(../../assets/images/weapon.svg) no-repeat scroll center center transparent;
+    z-index: 100;
+    width: 82px;
+    height: 167px;
+    position: relative;
+  }
+
+  .bullet1,
+  .bullet2,
+  .bullet3 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+  }
+
+  .bullet1 {
+    background: url(../../assets/images/bullet1.png) no-repeat center 100% scroll transparent;
+    animation: shoot1 0.12s linear;
+  }
+
+  .bullet2 {
+    background: url(../../assets/images/bullet2.png) no-repeat center 100% scroll transparent;
+    animation: shoot2 0.12s linear;
+  }
+
+  .bullet3 {
+    background: url(../../assets/images/bullet3.png) no-repeat center 100% scroll transparent;
+    animation: shoot3 0.12s linear;
+  }
+}
+
+@keyframes shoot1 {
+  0% {
+    background-position: center 100%;
+  }
+
+  100% {
+    background-position: center 0;
+  }
+}
+
+@keyframes shoot2 {
+  0% {
+    background-position: center 100%;
+  }
+
+  100% {
+    background-position: center 0;
+  }
+}
+
+@keyframes shoot3 {
+  0% {
+    background-position: center 100%;
+  }
+
+  100% {
+    background-position: center 0;
+  }
+}

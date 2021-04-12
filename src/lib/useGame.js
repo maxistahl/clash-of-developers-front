@@ -27,18 +27,6 @@ const useGame = () => {
   const [wordIndex, setWordIndex] = useRecoilState(wordIndexState);
   const [hitCounter, setHitCounter] = useRecoilState(hitState);
 
-  // const degrees = (rad) => ((rad * 180) / Math.PI);
-
-  // function calcAngle(opposite, adjacent) {
-  //   return degrees(Math.atan(opposite / adjacent));
-  // }
-
-  // console.log(calcAngle(5, 12));
-
-  // console.log(Math.hypot(5, 12));
-
-  // const [words, setWords] = useRecoilState(wordsState);
-
   useEffect(() => {
     console.log(words);
   }, []);

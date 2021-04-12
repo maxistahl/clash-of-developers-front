@@ -19,6 +19,7 @@ function InputText() {
   return (
     <div className={styles.input}>
       <input type="text" value={text} onChange={onChange} />
+      <div className={styles.focus} />
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.words {
+  position: fixed;
+  top: 5vh;
+  height: calc(60vh - 140px);
+  width: 80vw;
+  margin: 0 10vw;
+  color: #FFF;
+
+  & > div {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+}

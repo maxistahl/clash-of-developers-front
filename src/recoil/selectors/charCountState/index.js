@@ -2,7 +2,7 @@ import { selector } from 'recoil';
 import textState from 'recoil/atoms/textState';
 
 const charCountState = selector({
-  key: 'charCountState', // unique ID (with respect to other atoms/selectors)
+  key: 'charCountState',
   get: ({ get }) => {
     const text = get(textState);
 

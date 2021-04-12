@@ -1,26 +1,58 @@
 [
   {
-    "word": "react"
+    "word": "react",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
   },
   {
-    "word": "testing"
+    "word": "testing",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
   },
   {
-    "word": "qa"
+    "word": "qa",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
   },
   {
-    "word": "react.component"
+    "word": "react.component",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
   },
   {
-    "word": "jira"
+    "word": "jira",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
   },
   {
-    "word": "pull request"
+    "word": "pull request",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
   },
   {
-    "word": "github"
+    "word": "github",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
   },
   {
-    "word": "lorem ipsum"
+    "word": "lorem ipsum",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
   }
 ]
