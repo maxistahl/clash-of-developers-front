@@ -18,7 +18,8 @@ function InputText() {
 
   return (
     <div className={styles.input}>
-      <input type="text" value={text} onChange={onChange} />
+      {/* eslint-disable-next-line jsx-a11y/no-autofocus */}
+      <input type="text" value={text} onChange={onChange} autoFocus />
       <div className={styles.focus} />
     </div>
   );

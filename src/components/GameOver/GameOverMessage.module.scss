@@ -1,0 +1,59 @@
+.message {
+  font-size: 64px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 2px #000C, 2px 8px #0008;
+  color: #FFF;
+  animation: message-intro 1s cubic-bezier(1, -0.45, 0.58, 1) 0.2s;
+  animation-fill-mode: forwards;
+  display: flex;
+  z-index: 500;
+  opacity: 0;
+
+  span {
+    transform: translateY(150%);
+    animation: letter-intro 10s cubic-bezier(1, -0.45, 0.58, 1);
+    animation-iteration-count: infinite;
+    display: block;
+    min-width: 16px;
+  }
+
+  @for $i from 1 through 10 {
+    span:nth-child(#{$i}) {
+      animation-delay: #{$i / 10}s;
+    }
+  }
+}
+
+@keyframes message-intro {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 150%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes letter-intro {
+  0% {
+    transform: translateY(150%);
+  }
+
+  10%,
+  90% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(50%);
+  }
+
+  100% {
+    transform: translateY(150%);
+  }
+}

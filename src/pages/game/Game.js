@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import getRandomInt from 'lib/getRandomInt';
 import Weapon from 'components/Weapon';
 import gameState from 'recoil/atoms/gameState';
+import GameOverMessage from 'components/GameOver';
 
 function App() {
   const [, setWords] = useRecoilState(wordsState);
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      {gameStatus === 'gameover' && <div>Game over!</div>}
+      {gameStatus === 'gameover' && <GameOverMessage />}
       <CharacterCounter />
       <Weapon />
     </div>

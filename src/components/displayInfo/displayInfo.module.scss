@@ -5,9 +5,45 @@
   width: 80vw;
   margin: 0 10vw;
   color: #FFF;
+  font-size: 24px;
 
   & > div {
     position: absolute;
     transform: translate(-50%, -50%);
+
+    &.word {
+      opacity: 1;
+    }
+  }
+
+  .dead {
+    .word {
+      opacity: 0;
+    }
+  }
+
+  .current {
+    color: #BFF91B;
+  }
+
+  .boom {
+    width: 180px;
+    height: 180px;
+    background: url(../../assets/images/boom.svg) no-repeat scroll left center transparent;
+    animation: boom 0.4s steps(7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes boom {
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: -1260px;
   }
 }

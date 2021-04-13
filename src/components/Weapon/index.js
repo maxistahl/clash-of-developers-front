@@ -56,8 +56,6 @@ const Weapon = () => {
     <div id="weapon" className={styles['weapon-container']} style={{ transform: `rotate(${rotation}deg) translateX(-50%)` }}>
       <div className={styles.weapon} />
       {shoot && <div className={styles[`bullet${shoot}`]} style={{ height: `${hypo}px` }} />}
-      {/* <div className={styles.bullet2} style={{ height: `${hypo}px` }} />
-      <div className={styles.bullet3} style={{ height: `${hypo}px` }} /> */}
     </div>
   );
 };
