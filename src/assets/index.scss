@@ -1,9 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Bangers', cursive;
+  font-family: "Bangers", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110vw;
+  height: 110vh;
+  z-index: 0;
   background: url(./images/bg.svg) no-repeat fixed center center transparent;
+  background-size: 110vw, 110vh;
+  animation: body-bg 18s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes body-bg {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5vw, -10vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }

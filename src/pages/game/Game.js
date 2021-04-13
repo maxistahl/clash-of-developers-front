@@ -30,6 +30,7 @@ function App() {
 
   return (
     <div className="App">
+      <div className="bg" />
       {gameStatus === 'gameover' && <GameOverMessage />}
       <CharacterCounter />
       <Weapon />

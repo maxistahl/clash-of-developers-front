@@ -3,7 +3,6 @@ import { useRecoilValue } from 'recoil';
 import gameState from 'recoil/atoms/gameState';
 import wordIndexState from 'recoil/atoms/wordIndexState';
 import hitMatchState from 'recoil/selectors/hitMatchState';
-// import charCountState from 'recoil/selectors/charCountState';
 import styles from './Weapon.module.scss';
 
 const calculateSelectorPosition = (elem) => {
@@ -33,8 +32,8 @@ const Weapon = () => {
   useEffect(() => {
     const selectorPos = calculateSelectorPosition(document.querySelector('#mark'));
     const weaponPos = {
-      left: (679 + 41),
-      top: (395 + 167),
+      left: (window.innerWidth / 2),
+      top: ((window.innerHeight / 2) + 287),
     };
 
     const adyacente = weaponPos.top - selectorPos.top;

@@ -7,6 +7,13 @@
     }
   },
   {
+    "word": "recoil",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
     "word": "testing",
     "position": {
       "x": 0,
@@ -28,6 +35,13 @@
     }
   },
   {
+    "word": "atom",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
     "word": "jira",
     "position": {
       "x": 0,
@@ -36,6 +50,13 @@
   },
   {
     "word": "pull request",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "word": "selector",
     "position": {
       "x": 0,
       "y": 0
